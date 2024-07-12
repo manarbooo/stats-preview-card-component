@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+
+:root{
+    --Very_dark_blue_main_background: hsl(233, 47%, 7%);
+    --Dark_desaturated_blue_card_background: hsl(244, 38%, 16%);
+    --Soft_violet_accent: hsl(277, 64%, 61%);
+    --White_main_heading_stats: hsl(0, 0%, 100%);
+    --Slightly_transparent_white_main_paragraph: hsla(0, 0%, 100%, 0.75);
+    --Slightly_transparent_white_stat_headings: hsla(0, 0%, 100%, 0.6);
+
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    background-color: var(--Very_dark_blue_main_background);
+}
+
+.container{
+    width: 1000px;
+    height: 450px;
+    background-color: var(--Dark_desaturated_blue_card_background);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardInfo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 51%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.mainImg{
+  width: 49%;
+  height: 100%;
+  background-image: url(images/image-header-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  border-radius: 0 10px 10px 0;
+  margin-right: -1px;
+  position: relative;
+  
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(94, 0, 144, 0.8);
+    border-radius: 0 10px 10px 0;
+    opacity: .7;
+    position: absolute;
+    z-index: 1;
+    
+}
+
+.mainTitle{
+    color: var(--White_main_heading_stats);
+    font-size: 2.2rem;
+    margin-top: 60px;
+}
+
+.mainTitle span{
+  color: var(--Soft_violet_accent);
+}
+
+.description{
+    color: var(--Slightly_transparent_white_stat_headings);
+    line-height: 1.5;
+}
+
+.features{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -30px;
+    margin-top: 30px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin: 30px;
+}
+
+.number{
+    color: var(--White_main_heading_stats);
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.heading{
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--Slightly_transparent_white_stat_headings);
+    font-size: 0.8rem;
+    font-weight: 450;
+}
+
+
+
+@media  screen and (max-width: 700px) {
+    
+    body{
+        min-height: 900px;
+    }
+    .container{
+        width: 90%;
+        height: fit-content;
+        min-height: 800px;
+        flex-direction: column-reverse;
+        
+    }
+    .cardInfo{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .mainImg{
+        width:100%;
+        height: 35%;
+        background-image: url(images/image-header-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        border-radius: 10px 10px 0 0;
+        margin-right: -1px;
+        position: relative;
+        
+      }
+      .mask{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .mainTitle{
+        width: 100%;
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+    .description{
+        font-size: 0.8rem;
+        width: 90%;
+    }
+    .features{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        margin: 10px;
+    }
+    .number{
+       
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    .heading{
+        font-size: 0.5rem;
+        font-weight: 450;
+    }
+}
